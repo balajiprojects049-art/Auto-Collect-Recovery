@@ -1,0 +1,72 @@
+[
+    {
+        "id": "recovery",
+        "title": "Car Breakdown Recovery",
+        "description": "Fast and safe recovery for broken-down vehicles anywhere in the UK.",
+        "longDescription": "When your vehicle breaks down, you need a service you can trust to get you safe quickly. Our 24/7 Car Breakdown Recovery service covers the entire UK. Whether you are stuck on a motorway, a country road, or outside your home, our experienced team is ready to deploy immediately. We handle all vehicle types with care, ensuring damage-free recovery.",
+        "features": [
+            "24/7 Emergency Response",
+            "Nationwide Coverage",
+            "Damage-Free Lift Processing",
+            "Passengers Transported Safely"
+        ],
+        "image": "/images/hero-truck.png",
+        "icon": "CarFront"
+    },
+    {
+        "id": "transport",
+        "title": "Car Transportation",
+        "description": "Professional vehicle transport for dealerships, auctions, and private owners.",
+        "longDescription": "We provide premium car transportation services for dealerships, private buyers, and auctions. Our fleet of modern transporters ensures your vehicle arrives in showroom condition. From single vehicle moves to multi-car logistics, we plan every route for efficiency and safety.",
+        "features": [
+            "Door-to-Door Delivery",
+            "Fully Insured Transit",
+            "Single or Multi-Car Options",
+            "Real-time Updates"
+        ],
+        "image": "/images/transporter.png",
+        "icon": "Truck"
+    },
+    {
+        "id": "auction-pull",
+        "title": "Auction Pull Out",
+        "description": "We retrieve your vehicle from auction sites efficiently.",
+        "longDescription": "Buying from an auction? The logistics of getting the vehicle out can be a hassle. We specialize in 'pulling out' vehicles from major auction sites (Copart, BCA, Synetiq). We handle the paperwork, site clearance processes, and fast extraction so you don't incur storage fees.",
+        "features": [
+            "Authorized Auction Collectors",
+            "Fast Extraction to Avoid Fees",
+            "Paperwork Handling",
+            "Non-Runner Support"
+        ],
+        "image": "/images/fleet-flatbed.png",
+        "icon": "Gavel"
+    },
+    {
+        "id": "auction-coll-del",
+        "title": "Auction Collection & Delivery",
+        "description": "Seamless collection from auction and delivery to your doorstep.",
+        "longDescription": "Our complete end-to-end service for auction buyers. We collect your winning lot directly from the auction yard and deliver it straight to your driveway or repair center. Ideally suited for non-runners, accident-damaged vehicles, or classic car purchases.",
+        "features": [
+            "Nationwide Auction Coverage",
+            "Same-Day Collection Available",
+            "Contactless Delivery",
+            "Condition Report on Pickup"
+        ],
+        "image": "/images/fleet-heavy.png",
+        "icon": "Container"
+    },
+    {
+        "id": "jump-start",
+        "title": "Jump Start Services",
+        "description": "Dead battery? We'll get you back on the road in no time.",
+        "longDescription": "Nothing stops your day like a flat battery. Our rapid response vans are equipped with heavy-duty booster packs to jump-start any vehicle, from small city cars to large vans. If the battery is dead beyond repair, we can often source and fit a replacement on the spot.",
+        "features": [
+            "Rapid Response Vans",
+            "12V & 24V Boosting",
+            "Battery Health Check",
+            "Alternator Testing"
+        ],
+        "image": "/images/jump-start.png",
+        "icon": "Zap"
+    }
+]
