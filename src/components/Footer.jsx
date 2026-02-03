@@ -6,7 +6,9 @@ export default function Footer() {
         <footer className="bg-brand-dark text-slate-300 pt-16 pb-8">
             <div className="container-custom grid md:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <h3 className="text-white text-2xl font-bold mb-4">Auto Collect <span className="text-brand-yellow">Recovery</span></h3>
+                    <Link to="/" className="inline-block mb-6">
+                        <img src="/images/auto-collect-logo.jpg" alt="Auto Collect Recovery" className="h-20 w-auto rounded-xl" />
+                    </Link>
                     <p className="text-sm leading-relaxed mb-6">
                         Professional vehicle recovery and transportation services across the UK. Available 24/7 for emergencies.
                     </p>

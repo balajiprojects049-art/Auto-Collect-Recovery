@@ -9,7 +9,6 @@ export default function Services() {
             <div className="bg-brand-dark py-32 relative overflow-hidden min-h-[60vh] flex items-center">
                 <div className="absolute inset-0 z-0">
                     <img src="/images/services-hero.png" alt="Services Hero" className="w-full h-full object-cover object-[center_35%] opacity-50" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent"></div>
                 </div>
 
                 <div className="container-custom relative z-10 text-center">
