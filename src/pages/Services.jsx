@@ -2,9 +2,15 @@ import { motion } from 'framer-motion';
 import servicesData from '../data/services.json';
 import ServiceCard from '../components/ServiceCard';
 
+import { Helmet } from 'react-helmet-async';
+
 export default function Services() {
     return (
         <div className="bg-slate-50 min-h-screen">
+            <Helmet>
+                <title>Our Services | Auto Collect Recovery Services</title>
+                <meta name="description" content="Comprehensive vehicle recovery services including breakdown recovery, car transportation, auction collection, and jump start services." />
+            </Helmet>
             {/* Page Hero */}
             <div className="bg-brand-dark py-32 relative overflow-hidden min-h-[60vh] flex items-center">
                 <div className="absolute inset-0 z-0">

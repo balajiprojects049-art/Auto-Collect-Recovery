@@ -4,9 +4,16 @@ import { Phone, Clock, ShieldCheck, Star, MapPin } from 'lucide-react';
 import servicesData from '../data/services.json';
 import ServiceCard from '../components/ServiceCard';
 
+import { Helmet } from 'react-helmet-async';
+
 export default function Home() {
     return (
         <div className="overflow-x-hidden">
+            <Helmet>
+                <title>Auto Collect Recovery Services | 24/7 Vehicle Recovery UK</title>
+                <meta name="description" content="Fast, reliable & professional vehicle recovery across the UK. 24/7 emergency breakdown service, auction collection, and vehicle transportation." />
+                <meta name="keywords" content="vehicle recovery, breakdown service, car transport, auction collection, jump start, UK recovery" />
+            </Helmet>
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center bg-brand-dark overflow-hidden">
                 {/* Abstract Background */}

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 
+import { Helmet } from 'react-helmet-async';
+
 export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -9,6 +11,10 @@ export default function Contact() {
 
     return (
         <div className="bg-slate-50 min-h-screen">
+            <Helmet>
+                <title>Contact Us | Auto Collect Recovery Services</title>
+                <meta name="description" content="Contact Auto Collect Recovery 24/7. Emergency breakdown hotline, email support, and online inquiry form. Located in Luton, UK." />
+            </Helmet>
             {/* Page Hero */}
             <div className="bg-brand-dark py-32 relative overflow-hidden min-h-[60vh] flex items-center">
                 <div className="absolute inset-0 z-0">

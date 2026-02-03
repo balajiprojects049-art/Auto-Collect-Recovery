@@ -1,10 +1,16 @@
 import { motion } from 'framer-motion';
 import { Shield, Clock, Users, Award } from 'lucide-react';
 
+import { Helmet } from 'react-helmet-async';
+
 export default function About() {
     return (
 
         <div className="bg-slate-50 min-h-screen">
+            <Helmet>
+                <title>About Us | Auto Collect Recovery Services</title>
+                <meta name="description" content="Learn about Auto Collect Recovery Services. 5+ years of experience in vehicle recovery and transportation across the UK. Fast, safe, and reliable." />
+            </Helmet>
             {/* Page Hero */}
             <div className="bg-brand-dark py-32 relative overflow-hidden min-h-[60vh] flex items-center">
                 <div className="absolute inset-0 z-0">

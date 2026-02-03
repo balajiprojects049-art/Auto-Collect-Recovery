@@ -3,13 +3,17 @@ import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet-async';
+
 export default function Quote() {
+    // ... existing hooks
     const location = useLocation();
     const [isEmergency, setIsEmergency] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const initialService = location.state?.service || "";
 
     const handleSubmit = (e) => {
+        // ... (keep existing handleSubmit)
         e.preventDefault();
 
         const formData = new FormData(e.target);
@@ -37,7 +41,11 @@ Service   : ${formData.get('service')}
     if (submitted) {
         return (
             <div className="min-h-[80vh] flex items-center justify-center pt-20 pb-20">
+                <Helmet>
+                    <title>Quote Submitted | Auto Collect Recovery</title>
+                </Helmet>
                 <motion.div
+                    // ... (rest of submitted view)
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     className="bg-white p-12 rounded-3xl shadow-xl text-center max-w-lg mx-4 border border-slate-100"
@@ -57,6 +65,10 @@ Service   : ${formData.get('service')}
 
     return (
         <div className="pt-12 pb-24 bg-slate-50 min-h-screen">
+            <Helmet>
+                <title>Get a Free Quote | Auto Collect Recovery Services</title>
+                <meta name="description" content="Request a free, no-obligation quote for vehicle recovery and transportation. Transparent pricing and fast response times." />
+            </Helmet>
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
