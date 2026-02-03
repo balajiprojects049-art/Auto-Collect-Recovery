@@ -11,6 +11,25 @@ export default function Quote() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const message = `NEW QUOTE REQUEST
+--------------------------------
+Emergency : ${isEmergency ? 'YES' : 'No'}
+Name      : ${formData.get('name')}
+Phone     : ${formData.get('phone')}
+Vehicle   : ${formData.get('vehicleType')}
+Car Model : ${formData.get('carModel')}
+Year      : ${formData.get('carYear')}
+Pickup    : ${formData.get('pickup')}
+Drop-off  : ${formData.get('dropoff')}
+Service   : ${formData.get('service')}
+--------------------------------`;
+
+        const whatsappUrl = `https://wa.me/917036215191?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+
         setSubmitted(true);
         window.scrollTo(0, 0);
     };
@@ -44,7 +63,7 @@ export default function Quote() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
-                    <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-brand-dark">Get a Free <span className="text-brand-orange">Quote</span></h1>
+                    <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-brand-dark">Request a <span className="text-brand-orange">Quote</span></h1>
                     <p className="text-xl text-slate-600">
                         Transparent pricing with no hidden fees. Fill out the form below for an instant estimate.
                     </p>
@@ -74,17 +93,17 @@ export default function Quote() {
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label className="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
-                                <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="Enter your name" required />
+                                <input type="text" name="name" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="Enter your name" required />
                             </div>
                             <div>
                                 <label className="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
-                                <input type="tel" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="Enter phone number" required />
+                                <input type="tel" name="phone" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="Enter phone number" required />
                             </div>
                         </div>
 
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2">Vehicle Type</label>
-                            <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all bg-white" required>
+                            <select name="vehicleType" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all bg-white" required>
                                 <option value="">Select vehicle type...</option>
                                 <option value="car">Car (Sedan/Hatchback)</option>
                                 <option value="suv">SUV / 4x4</option>
@@ -96,18 +115,29 @@ export default function Quote() {
 
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
+                                <label className="block text-sm font-bold text-slate-700 mb-2">Car Name & Model</label>
+                                <input type="text" name="carModel" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="e.g. Ford Focus" required />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-bold text-slate-700 mb-2">Year of Car</label>
+                                <input type="number" name="carYear" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="e.g. 2018" min="1900" max="2099" required />
+                            </div>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div>
                                 <label className="block text-sm font-bold text-slate-700 mb-2">Pickup Location</label>
-                                <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="Postcode or City" required />
+                                <input type="text" name="pickup" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="Postcode or City" required />
                             </div>
                             <div>
                                 <label className="block text-sm font-bold text-slate-700 mb-2">Drop-off Location</label>
-                                <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="Postcode or City" required />
+                                <input type="text" name="dropoff" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all" placeholder="Postcode or City" required />
                             </div>
                         </div>
 
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2">Service Required</label>
-                            <select defaultValue={initialService} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all bg-white" required>
+                            <select name="service" defaultValue={initialService} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all bg-white" required>
                                 <option value="">Select service...</option>
                                 <option value="Car Breakdown Recovery">Car Breakdown Recovery</option>
                                 <option value="Car Transportation">Car Transportation</option>
@@ -118,7 +148,7 @@ export default function Quote() {
                         </div>
 
                         <button type="submit" className={`w-full py-4 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:-translate-y-1 ${isEmergency ? 'bg-red-600 hover:bg-red-700 text-white animate-pulse' : 'btn-primary'}`}>
-                            {isEmergency ? 'REQUEST EMERGENCY ASSISTANCE' : 'Get My Free Quote'}
+                            {isEmergency ? 'REQUEST EMERGENCY ASSISTANCE' : 'Submit Quote'}
                         </button>
                     </form>
                 </motion.div>
