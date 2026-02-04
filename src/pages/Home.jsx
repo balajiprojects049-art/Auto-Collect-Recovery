@@ -126,7 +126,7 @@ export default function Home() {
                                 <motion.img
                                     initial={{ opacity: 0, y: -20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    src="/images/transporter.png" className="rounded-2xl shadow-lg border border-white" alt="Transport"
+                                    src="/images/fleet-flatbed.png" className="rounded-2xl shadow-lg border border-white" alt="Transport"
                                 />
                             </div>
                             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-slate-50 rounded-full blur-3xl opacity-50"></div>

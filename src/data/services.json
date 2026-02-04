@@ -25,7 +25,7 @@
             "Single or Multi-Car Options",
             "Real-time Updates"
         ],
-        "image": "/images/transporter.png",
+        "image": "/images/single-carrier-2.png",
         "icon": "Truck"
     },
     {
@@ -53,7 +53,7 @@
             "Contactless Delivery",
             "Condition Report on Pickup"
         ],
-        "image": "/images/fleet-heavy.png",
+        "image": "/images/single-carrier-1.png",
         "icon": "Container"
     },
     {

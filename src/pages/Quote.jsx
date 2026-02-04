@@ -10,7 +10,7 @@ export default function Quote() {
     const location = useLocation();
     const [isEmergency, setIsEmergency] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-    const initialService = location.state?.service || "";
+    const [selectedService, setSelectedService] = useState(location.state?.service || "");
 
     const handleSubmit = (e) => {
         // ... (keep existing handleSubmit)
@@ -29,6 +29,7 @@ Year      : ${formData.get('carYear')}
 Pickup    : ${formData.get('pickup')}
 Drop-off  : ${formData.get('dropoff')}
 Service   : ${formData.get('service')}
+${formData.get('passengers') ? `Passengers: ${formData.get('passengers')}` : ''}
 --------------------------------`;
 
         const whatsappUrl = `https://wa.me/447384228118?text=${encodeURIComponent(message)}`;
@@ -145,16 +146,42 @@ Service   : ${formData.get('service')}
                             </div>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-bold text-slate-700 mb-2">Service Required</label>
-                            <select name="service" defaultValue={initialService} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all bg-white" required>
-                                <option value="">Select service...</option>
-                                <option value="Car Breakdown Recovery">Car Breakdown Recovery</option>
-                                <option value="Car Transportation">Car Transportation</option>
-                                <option value="Auction Pull Out">Auction Pull Out</option>
-                                <option value="Auction Collection & Delivery">Auction Collection & Delivery</option>
-                                <option value="Jump Start Services">Jump Start Services</option>
-                            </select>
+                        <div className="space-y-6">
+                            <div>
+                                <label className="block text-sm font-bold text-slate-700 mb-2">Service Required</label>
+                                <select
+                                    name="service"
+                                    value={selectedService}
+                                    onChange={(e) => setSelectedService(e.target.value)}
+                                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all bg-white"
+                                    required
+                                >
+                                    <option value="">Select service...</option>
+                                    <option value="Car Breakdown Recovery">Car Breakdown Recovery</option>
+                                    <option value="Car Transportation">Car Transportation</option>
+                                    <option value="Auction Pull Out">Auction Pull Out</option>
+                                    <option value="Auction Collection & Delivery">Auction Collection & Delivery</option>
+                                    <option value="Jump Start Services">Jump Start Services</option>
+                                </select>
+                            </div>
+
+                            {selectedService === "Car Breakdown Recovery" && (
+                                <motion.div
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: 'auto' }}
+                                    className="pt-2"
+                                >
+                                    <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Number of Passengers</label>
+                                    <input
+                                        type="text"
+                                        name="passengers"
+                                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 outline-none transition-all bg-brand-yellow/5"
+                                        placeholder="Are there any passengers? (e.g. 2 adults)"
+                                        required={selectedService === "Car Breakdown Recovery"}
+                                    />
+                                    <p className="text-[10px] text-slate-400 mt-1 italic">* This helps us send the right recovery vehicle for everyone's safety.</p>
+                                </motion.div>
+                            )}
                         </div>
 
                         <button type="submit" className={`w-full py-4 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:-translate-y-1 ${isEmergency ? 'bg-red-600 hover:bg-red-700 text-white animate-pulse' : 'btn-primary'}`}>
