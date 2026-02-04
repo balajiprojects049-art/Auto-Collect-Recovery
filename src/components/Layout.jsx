@@ -22,7 +22,7 @@ export default function Layout({ children }) {
             {/* Floating Action Button - Mobile Only Usually, but good for Desktop too */}
             <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-4">
                 <a
-                    href="https://wa.me/917036215191"
+                    href="https://wa.me/447384228118?text=Hello%2C%20I%20need%20vehicle%20recovery%20assistance."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform hover:scale-110 flex items-center justify-center border-2 border-white"
@@ -33,7 +33,7 @@ export default function Layout({ children }) {
                     </svg>
                 </a>
                 <a
-                    href="tel:+917036215191"
+                    href="tel:+447384228118"
                     className="bg-brand-yellow text-brand-dark p-4 rounded-full shadow-lg hover:bg-yellow-400 transition-transform hover:scale-110 flex items-center justify-center animate-pulse border-2 border-white"
                     aria-label="Call Emergency"
                 >

@@ -31,7 +31,7 @@ Drop-off  : ${formData.get('dropoff')}
 Service   : ${formData.get('service')}
 --------------------------------`;
 
-        const whatsappUrl = `https://wa.me/917036215191?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/447384228118?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
 
         setSubmitted(true);
@@ -55,7 +55,7 @@ Service   : ${formData.get('service')}
                     </div>
                     <h2 className="text-3xl font-bold mb-4 text-brand-dark">Quote Request Received!</h2>
                     <p className="text-slate-600 mb-8">
-                        Thank you for your request. One of our team members will review your details and contact you within 15 minutes with a comprehensive quote.
+                        Thank you for your request. One of our team members will review your details and contact you within 20 to 30 minutes with a comprehensive quote.
                     </p>
                     <a href="/" className="btn-primary block w-full text-center">Back to Home</a>
                 </motion.div>

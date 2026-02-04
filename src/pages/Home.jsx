@@ -52,7 +52,7 @@ export default function Home() {
 
                             <div className="mt-12 flex items-center gap-8 text-slate-400 text-sm font-medium">
                                 <div className="flex items-center gap-2">
-                                    <Clock className="text-brand-yellow" size={18} /> <span>Avg. 45 min response</span>
+                                    <Clock className="text-brand-yellow" size={18} /> <span>Avg. 20-30 min response</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <ShieldCheck className="text-brand-yellow" size={18} /> <span>Fully Insured</span>
@@ -133,17 +133,20 @@ export default function Home() {
                         </div>
 
                         <div className="order-1 md:order-2">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-brand-dark">Why Choose <br /><span className="text-brand-orange">Auto Collect</span>?</h2>
+                            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-brand-dark">Why Choose <span className="text-brand-orange">Auto Collect</span>?</h2>
                             <p className="text-slate-600 mb-8 text-lg leading-relaxed">
                                 With over 5 years of industry experience, we have built a reputation for reliability, speed, and professionalism. We treat every vehicle as if it were our own, ensuring a stress-free experience.
                             </p>
 
                             <div className="space-y-6">
                                 {[
-                                    { title: '24/7 Availability', desc: 'Round-the-clock emergency support, 365 days a year.' },
-                                    { title: 'Fast Response Time', desc: 'We prioritize emergencies to get you safe quickly.' },
-                                    { title: 'Nationwide Coverage', desc: 'Operating across the entire UK network.' },
-                                    { title: 'Professional Team', desc: 'Fully trained and insured recovery specialists.' }
+                                    { title: 'EXPERIENCED TEAM', desc: 'Professional handlers with years of expertise.' },
+                                    { title: 'QUICK RESPONSE TIME', desc: 'Avg. 20-30 min response time.' },
+                                    { title: 'COMPETITIVE PRICING', desc: 'Affordable rates with no hidden charges.' },
+                                    { title: 'FULLY INSURED', desc: 'Comprehensive insurance for your peace of mind.' },
+                                    { title: '24/7 EMERGENCY ASSISTANCE', desc: 'Round-the-clock support, 365 days a year.' },
+                                    { title: 'SAFETY & SECURITY', desc: 'We prioritise your safety and vehicle’s security.' },
+                                    { title: 'SATISFACTION GUARANTEED', desc: '100 percentage satisfaction guarantee.' }
                                 ].map((item, i) => (
                                     <motion.div
                                         key={i}
@@ -268,7 +271,7 @@ export default function Home() {
 
                         <div className="space-y-4">
                             {[
-                                { q: "How quickly can you reach me?", a: "Our average response time is 45 minutes, depending on traffic and your location. We prioritize dangerous roadside situations." },
+                                { q: "How quickly can you reach me?", a: "Our average response time is 20 to 30 minutes, depending on traffic and your location. We prioritize dangerous roadside situations." },
                                 { q: "Do you operate 24/7?", a: "Yes, we operate 24 hours a day, 7 days a week, 365 days a year including all public holidays." },
                                 { q: "How much does recovery cost?", a: "Prices vary based on distance and vehicle type. Contact us for a free, no-obligation quote instantly." },
                                 { q: "Can you transport my car to any garage?", a: "Yes, we can transport your vehicle to any destination of your choice across the UK, be it a garage, home, or workplace." },
