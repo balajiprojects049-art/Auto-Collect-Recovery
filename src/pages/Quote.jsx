@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 
 export default function Quote() {
     // ... existing hooks
@@ -41,9 +41,7 @@ Service   : ${formData.get('service')}
     if (submitted) {
         return (
             <div className="min-h-[80vh] flex items-center justify-center pt-20 pb-20">
-                <Helmet>
-                    <title>Quote Submitted | Auto Collect Recovery</title>
-                </Helmet>
+                <SEO title="Quote Submitted" />
                 <motion.div
                     // ... (rest of submitted view)
                     initial={{ scale: 0.8, opacity: 0 }}
@@ -65,10 +63,10 @@ Service   : ${formData.get('service')}
 
     return (
         <div className="pt-12 pb-24 bg-slate-50 min-h-screen">
-            <Helmet>
-                <title>Get a Free Quote | Auto Collect Recovery Services</title>
-                <meta name="description" content="Request a free, no-obligation quote for vehicle recovery and transportation. Transparent pricing and fast response times." />
-            </Helmet>
+            <SEO
+                title="Get a Free Quote"
+                description="Request a free, no-obligation quote for vehicle recovery and transportation. Transparent pricing and fast response times."
+            />
             <div className="container-custom">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

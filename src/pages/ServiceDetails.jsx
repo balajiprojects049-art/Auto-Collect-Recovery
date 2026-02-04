@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 import servicesData from '../data/services.json';
 
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 
 export default function ServiceDetails() {
     const { id } = useParams();
@@ -15,10 +15,11 @@ export default function ServiceDetails() {
 
     return (
         <div className="pt-12 pb-24 min-h-screen bg-slate-50">
-            <Helmet>
-                <title>{service.title} | Auto Collect Recovery</title>
-                <meta name="description" content={service.longDescription.substring(0, 150) + "..."} />
-            </Helmet>
+            <SEO
+                title={service.title}
+                description={service.longDescription.substring(0, 150) + "..."}
+                image={service.image}
+            />
             <div className="container-custom">
                 <Link to="/services" className="inline-flex items-center gap-2 text-slate-500 hover:text-brand-orange mb-8 font-medium transition-colors">
                     <ArrowLeft size={20} /> Back to Services
