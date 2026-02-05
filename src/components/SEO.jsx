@@ -11,7 +11,7 @@ export default function SEO({
     schema
 }) {
     const location = useLocation();
-    const siteUrl = 'https://autocollectrecovery.co.uk'; // Ideally this should be an env variable or config
+    const siteUrl = 'https://www.autocollectrecovery.co.uk'; // Ideally this should be an env variable or config
     const currentUrl = `${siteUrl}${location.pathname}`;
     const defaultImage = `${siteUrl}/images/auto-collect-logo.jpg`;
 
